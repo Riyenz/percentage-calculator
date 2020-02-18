@@ -77,3 +77,19 @@ document.querySelector('[data-model="c-change-from"]').addEventListener('keyup',
 document.querySelector('[data-model="c-change-to"]').addEventListener('keyup', listener);
 
 render()
+
+const tabsButton = document.querySelectorAll('.tabs__button');
+const clearActiveTabs = () => {
+  tabsButton.forEach(function(e) {
+    e.style.color = "#494f6e";
+  })
+}
+
+tabsButton.forEach(function(e) {
+  e.addEventListener('click', function() {
+    clearActiveTabs()
+    e.style.color = "#e4a64e";
+  })
+});
+
+tabsButton[0].style.color = "#e4a64e";

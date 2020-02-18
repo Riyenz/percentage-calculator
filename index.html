@@ -38,10 +38,9 @@
 <body>
   <div class="home">
     <div class="home__header mb-4">
-      <h1 class="home__title mb-2">Percentage Calculator Online</h1>
-      <p class="home__description">The modern percentage calculator using neumorphism ui design and is also ad free!</p>
-      <svg onclick="document.querySelector('html').scrollTo(0, 1000)" class="chevron-down animated-bounce" enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 "/></svg>
+      <h1 class="home__title">Percentage Calculator</h1>
     </div>
+    <p class="home__description mb-4">The modern percentage calculator using neumorphism ui design and is also ad free!</p>
     <div class="home__cards">
       <div class="card">
         <h3 class="card__title mb-2">What is <span class="n-text">x%</span> of <span class="n-text">y</span>?</h3>
@@ -101,7 +100,34 @@
       </div>
     </div>
   </div>
+
   
+  <div class="tabs">
+    <button
+      class="tabs__button tabs__button--active"
+      onclick="document.querySelector('.home__cards').scrollTo(0, 0)"
+    >
+      <object type="image/svg+xml" data="/assets/images/sale.svg" class="tabs__button-icon">
+        Bike
+      </object>
+      x% of y
+    </button>
+    <button
+      class="tabs__button"
+      onclick="document.querySelector('.home__cards').scrollTo(500, 0)"
+    >
+      <img class="tabs__button-icon" src="/assets/images/pie-chart.svg" alt="x is what percent of y?">
+      x is what of y?
+    </button>
+    <button
+      class="tabs__button"
+      onclick="document.querySelector('.home__cards').scrollTo(1000, 0)"
+    >
+      <img class="tabs__button-icon" src="/assets/images/arrow.svg" alt="Percentage increase/decrease from x to y">
+      increase/decrease
+    </button>
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>
