@@ -79,14 +79,27 @@ document.querySelector('[data-model="c-change-to"]').addEventListener('keyup', l
 render()
 
 const tabsButton = document.querySelectorAll('.tabs__button');
+const tabDots = []
 const activeTabClass = 'tabs__button--active'
+const activeDotClass = 'active'
 const clearActiveTabs = () => {
-  tabsButton.forEach(function(e) {
+  tabsButton.forEach((e, i) => {
+    tabDots[i].classList.remove(activeDotClass);
     e.classList.remove(activeTabClass);
   })
 }
 
-tabsButton[0].classList.add(activeTabClass);
+const initializeTabs = () => {
+  tabsButton.forEach(button => {
+    const tabDotSpan = document.createElement('span')
+    document.querySelector('.tab-dots').appendChild(tabDotSpan)
+    tabDots.push(tabDotSpan)
+  })
+
+  tabDots[0].classList.add(activeDotClass);
+  tabsButton[0].classList.add(activeTabClass);
+}
+
 
 document.querySelector('.home__cards')
   .addEventListener("scroll", function(e) {
@@ -97,7 +110,8 @@ document.querySelector('.home__cards')
     
     clearActiveTabs()
     const selectedTab = parseInt((currentScroll + deviceWidth) / deviceWidth) - 1
-
-    console.log(selectedTab)
+    tabDots[selectedTab].classList.add(activeDotClass);
     tabsButton[selectedTab].classList.add(activeTabClass);
   });
+
+initializeTabs()

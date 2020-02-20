@@ -14,6 +14,7 @@ html, body {
 
 :root {
   --color: #494f6e;
+  --secondary-color: #7c83a0;
   --theme-color: #e4a64e;
   --bg-color: #f1f3f6;
   --h-font-family: 'Muli', sans-serif;
@@ -224,6 +225,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.n-text {
+  color: var(--theme-color);
+}
+
+.tab-dots {
+  position: fixed;
+  bottom: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  span {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 1rem;
+    margin: 0 5px;
+
+    &.active {
+      background-color: var(--secondary-color);
+    }
+  }
+}
+
 @media (max-width: 576px) {
   html, body {
     overflow: hidden;
@@ -277,8 +303,4 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 5vh;
     }
   }
-}
-
-.n-text {
-  color: var(--theme-color);
 }
