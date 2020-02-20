@@ -261,9 +261,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  outline: none;
 }
 
-.tabs__button :active {
+.tabs__button--active {
   color: var(--theme-color);
 }
 
@@ -279,10 +280,6 @@ h1, h2, h3, h4, h5, h6 {
   }
   .home {
     padding: 0;
-  }
-  .home__header {
-    padding: .75rem 1rem;
-    margin-bottom: 0;
   }
   .home__title {
     font-size: .75rem;

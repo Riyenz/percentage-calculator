@@ -48,13 +48,13 @@
             <div class="input mb-2">
             <label class="input__label mb-1" for="">What is</label>
             <div class="input__box-w-icon">
-              <input type="number" placeholder="10" data-model="a-what-is">
+              <input type="number" step="any" placeholder="10" data-model="a-what-is">
               <span>%</span>
             </div>
           </div>
           <div class="input mb-3">
             <label class="input__label mb-1" for="">of</label>
-            <input class="input__box" type="number" placeholder="300" data-model="a-of">
+            <input class="input__box" type="number" step="any" placeholder="300" data-model="a-of">
           </div>
           <div class="result mb-1">
             <label class="result__label mb-1" for="">=</label>
@@ -68,11 +68,11 @@
         <div class="card__content">
           <div class="input mb-2">
             <label class="input__label mb-1" for="">&nbsp;</label>
-            <input class="input__box" type="number" placeholder="30" data-model="b-portion">
+            <input class="input__box" type="number" step="any" placeholder="30" data-model="b-portion">
           </div>
           <div class="input mb-3">
             <label class="input__label mb-1" for="">Is what percent of</label>
-            <input class="input__box" type="number" placeholder="300" data-model="b-amount">
+            <input class="input__box" type="number" step="any" placeholder="300" data-model="b-amount">
           </div>
           <div class="result mb-1">
             <label class="result__label mb-1" for="">=</label>
@@ -86,11 +86,11 @@
         <div class="card__content">
           <div class="input mb-2">
             <label class="input__label mb-1" for="">What is the percentage increase/decrease from</label>
-            <input class="input__box" type="number" placeholder="300" data-model="c-change-from">
+            <input class="input__box" type="number" step="any" placeholder="300" data-model="c-change-from">
           </div>
           <div class="input mb-3">
             <label class="input__label mb-1" for="">to</label>
-            <input class="input__box" type="number" placeholder="330" data-model="c-change-to">
+            <input class="input__box" type="number" step="any" placeholder="330" data-model="c-change-to">
           </div>
           <div class="result mb-1">
             <label class="result__label mb-1" for="">=</label>
@@ -104,7 +104,7 @@
   
   <div class="tabs">
     <button
-      class="tabs__button tabs__button--active"
+      class="tabs__button"
       onclick="document.querySelector('.home__cards').scrollTo(0, 0)"
     >
       <object type="image/svg+xml" data="/assets/images/sale.svg" class="tabs__button-icon">
@@ -114,14 +114,14 @@
     </button>
     <button
       class="tabs__button"
-      onclick="document.querySelector('.home__cards').scrollTo(500, 0)"
+      onclick="document.querySelector('.home__cards').scrollTo(document.querySelector('html').offsetWidth, 0)"
     >
       <img class="tabs__button-icon" src="/assets/images/pie-chart.svg" alt="x is what percent of y?">
-      x is what of y?
+      x is n% of y?
     </button>
     <button
       class="tabs__button"
-      onclick="document.querySelector('.home__cards').scrollTo(1000, 0)"
+      onclick="document.querySelector('.home__cards').scrollTo(document.querySelector('html').offsetWidth * 2, 0)"
     >
       <img class="tabs__button-icon" src="/assets/images/arrow.svg" alt="Percentage increase/decrease from x to y">
       increase/decrease
